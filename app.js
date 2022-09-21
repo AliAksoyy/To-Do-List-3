@@ -15,17 +15,7 @@ let input = document.querySelector("#txtItem")
 
 
 items.forEach(function(item) {
-  let li = document.createElement("li");
-  li.setAttribute("class", "list-group-item");
-
-  let text = document.createTextNode(item);
-  li.append(text);
-  let span = document.createElement("span");
-  span.className = "close";
-  let content = document.createTextNode("X");
-  span.appendChild(content);
-  li.append(span);
-  list.appendChild(li);
+ creatItem(item)
 
   
 })
@@ -59,10 +49,25 @@ button.onclick = ()=> {
   if(!input.value) {
     alert("Please something write")
   }else {
-    list.innerHTML += `<li class="list-group-item">${input.value}
-    <span class="close"></span></li>`;
+    // list.innerHTML += `<li class="list-group-item">${input.value}
+    // <span class="close"></span></li>`;
+    // input.value =""
+    creatItem(input.value);
     input.value =""
   }
+}
+function creatItem (item) {
+  let li = document.createElement("li");
+  li.setAttribute("class", "list-group-item");
+
+  let text = document.createTextNode(item);
+  li.append(text);
+  let span = document.createElement("span");
+  span.className = "close";
+  let content = document.createTextNode("X");
+  span.appendChild(content);
+  li.append(span);
+  list.appendChild(li);
 }
 
 

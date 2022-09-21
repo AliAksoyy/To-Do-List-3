@@ -12,4 +12,10 @@ ul li.checked {
 .close {
     padding-right: 6px;
 }
+#deleteAll {
+    position:absolute;
+    right: 7px;
+    top: 3px;
+   
+}
 
