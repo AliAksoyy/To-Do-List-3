@@ -60,7 +60,7 @@ button.onclick = ()=> {
     alert("Please something write")
   }else {
     list.innerHTML += `<li class="list-group-item">${input.value}
-    <span class="close">X</span></li>`;
+    <span class="close"></span></li>`;
     input.value =""
   }
 }
