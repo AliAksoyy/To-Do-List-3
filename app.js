@@ -27,5 +27,10 @@ items.forEach(function(item) {
   li.append(span)
   list.appendChild(li)
 
+})
 
+list.addEventListener("click", function(e) {
+  if(e.target.tagName = "li") {
+    e.target.classList.toggle("checked")
+  }
 })
