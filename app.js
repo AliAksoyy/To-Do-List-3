@@ -24,6 +24,7 @@ list.addEventListener("click", function(e) {
 
     if(e.target.tagName === "LI") {
       e.target.classList.toggle("checked")
+      DeleteButton()
     }
 
   
@@ -60,6 +61,13 @@ button.onclick = ()=> {
     input.value =""
   }
 }
+ document.querySelector("#deleteAll").onclick = ()=> {
+  let el = document.querySelectorAll(".checked")
+  el.forEach((item)=> {
+    item.classList.add("d-none")
+  })
+ }
+
 function creatItem (item) {
   let li = document.createElement("li");
   li.setAttribute("class", "list-group-item");
@@ -72,6 +80,16 @@ function creatItem (item) {
   span.appendChild(content);
   li.append(span);
   list.appendChild(li);
+}
+
+function DeleteButton () {
+  let checkedList = document.querySelectorAll(".list-group-item.checked")
+    if(checkedList.length>0) {
+      document.querySelector("#deleteAll").classList.remove("d-none")
+    }else {
+      document.querySelector("#deleteAll").classList.add("d-none")
+
+    }
 }
 
 
