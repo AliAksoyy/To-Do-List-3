@@ -44,6 +44,7 @@ for(let i = 0; i<close.length; i++) {
   close[i].onclick = function() {
     const li = this.parentElement
     li.style.display = "none"
+    li.classList.remove("checked")
   }
 }
 
