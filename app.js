@@ -1,6 +1,6 @@
 var items = ["item 1","item 2", "item 3", "item 4"]
 
-
+let button = document.querySelector(".btn")
 let list = document.querySelector("#myList")
 let input = document.querySelector("#txtItem")
 
@@ -53,6 +53,19 @@ for(let i = 0; i<close.length; i++) {
     li.style.display = "none"
   }
 }
+
+button.onclick = ()=> {
+
+  if(!input.value) {
+    alert("Please something write")
+  }else {
+    list.innerHTML += `<li class="list-group-item">${input.value}
+    <span class="close">X</span></li>`;
+    input.value =""
+  }
+}
+
+
 
 
 
