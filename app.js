@@ -27,6 +27,7 @@ items.forEach(function(item) {
   li.append(span);
   list.appendChild(li);
 
+  
 })
 
 list.addEventListener("click", function(e) {
@@ -37,13 +38,22 @@ list.addEventListener("click", function(e) {
 })
 
 close = document.querySelectorAll(".close")
+//* 1 çözüzmm
+// close.forEach((i)=> {
+//        i.addEventListener("click", (a)=> {
+//         if(a.target.classList.contains("close")) {
+//           i.parentElement.remove()
+//         }
+//        })
+// })
+for(let i = 0; i<close.length; i++) {
 
-close.forEach((i)=> {
-       i.addEventListener("click", (a)=> {
-        if(a.target.classList.contains("close")) {
-          i.parentElement.remove()
-        }
-       })
-})
+  close[i].onclick = function() {
+    const li = this.parentElement
+    li.style.display = "none"
+  }
+}
+
+
 
 
