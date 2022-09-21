@@ -5,16 +5,18 @@ let list = document.querySelector("#myList")
 let input = document.querySelector("#txtItem")
 
 // ** Alternative working
-// var html = ""
 
-// items.forEach((item)=> {
-//   html += `<li class="list-group-item">${item}</li>`;
+// items.forEach(function(item) {
+//     list.innerHTML += `<li class="list-group-item">${item}
+//                             <span class="close">&times;</span>
+//                         </li>`;
 // })
 
-// list.innerHTML = html
+
 
 items.forEach(function(item) {
   
+
   let li = document.createElement("li")
   li.setAttribute("class","list-group-item")
   
